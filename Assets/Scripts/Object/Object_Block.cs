@@ -23,11 +23,11 @@ public class Object_Block : MonoBehaviour
         {
             if (collision.gameObject.transform.position.x >= 0)
             {
-                Instantiate(Wall, new Vector3(2.5f, -3, 0), Quaternion.identity);
+                Instantiate(Wall, new Vector3(2.3f, -1, 0), Quaternion.identity);
             }
             else
             {
-                Instantiate(Wall, new Vector3(-2.5f, -3, 0), Quaternion.identity);
+                Instantiate(Wall, new Vector3(-2.3f, -1, 0), Quaternion.identity);
             }
             Destroy(gameObject);
         }
