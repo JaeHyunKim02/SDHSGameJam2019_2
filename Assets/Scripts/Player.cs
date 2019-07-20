@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         renderer = gameObject.GetComponentInChildren<SpriteRenderer>();
 
-        GameManager.GetInstance().HPBar.fillAmount -= f;
+       // GameManager.GetInstance().HPBar.fillAmount -= 0.5f;
         
     }
     void FixedUpdate()
@@ -99,7 +99,7 @@ public class Player : MonoBehaviour
 
         }
 
-        float HPSpeed = GameManager.GetInstance().HPBar.fillAmount+0.5f;
+        float HPSpeed = GameManager.GetInstance().HPBar.fillAmount+0.3f;
 
         float speedx = Mathf.Abs(this.rigidbody2D.velocity.x);
 
