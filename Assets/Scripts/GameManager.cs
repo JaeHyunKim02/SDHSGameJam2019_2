@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     public Image HPBar;
     public Image SPBar;
 
+    public bool isDie= false;
+
     private static GameManager instnce;
     public static GameManager GetInstance()//싱글톤
     {

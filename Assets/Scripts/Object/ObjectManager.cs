@@ -38,8 +38,9 @@ public class ObjectManager : MonoBehaviour
         {
             case 1:
                 if (rand >= 1 && rand <= 40) Instantiate(GO1, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 41 && rand <= 55) Instantiate(GO2, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 56 && rand <= 85) Instantiate(GO5, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
+                else if (rand >= 41 && rand <= 60) Instantiate(GO2, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
+                else if (rand >= 61 && rand <= 70) Instantiate(GO4, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
+                else if (rand >= 71 && rand <= 85) Instantiate(GO5, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
                 else if (rand >= 86 && rand <= 95) Instantiate(GO6, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
                 else if (rand >= 96 && rand <= 100) Instantiate(GO7, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
                 break;

@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     public int Scoer;
     private void Start()
     {
+        StartCoroutine("HPSP");
         timer = 1.0f;
         Scoer = 0;
 
@@ -33,6 +34,16 @@ public class UIManager : MonoBehaviour
 
         }
         t_MyScore.text = "MyScoer:" + Scoer;
+    }
+
+    IEnumerator HPSP()
+    {
+        yield return new WaitForSeconds(1.0f);
+
+        GameManager.GetInstance().HPBar.fillAmount -= 0.025f;
+        GameManager.GetInstance().SPBar.fillAmount -= 0.025f;
+        StartCoroutine("HPSP");
+
     }
 
 }

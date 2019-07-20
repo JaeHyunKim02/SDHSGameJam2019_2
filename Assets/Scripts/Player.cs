@@ -30,17 +30,17 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if(GameManager.GetInstance().SPBar.fillAmount<= 0.5)
-        {
+        //if(GameManager.GetInstance().SPBar.fillAmount<= 0.5)
+        //{
 
-        }
+        //}
 
         if (!StunOn)
         {
 
             if (Input.acceleration.x > this.Speed || Input.GetKeyDown(KeyCode.RightArrow))
             {
-                if (GameManager.GetInstance().SPBar.fillAmount <= 0.5)
+                if (GameManager.GetInstance().SPBar.fillAmount <= 0.3f)
                 {
                     key = -1;
                     renderer.flipX = true;
@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
             }
             if (Input.acceleration.x < -this.Speed || Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                if (GameManager.GetInstance().SPBar.fillAmount <= 0.5)
+                if (GameManager.GetInstance().SPBar.fillAmount <= 0.3f)
                 {
                     key = 1;
                     renderer.flipX = false;
@@ -108,6 +108,13 @@ public class Player : MonoBehaviour
         {
             this.rigidbody2D.AddForce(transform.right * key * this.WalkFoce*HPSpeed);
         }
+
+        if (gameObject.transform.position.x >= 3.0f || gameObject.transform.position.x <= -3.0f||GameManager.GetInstance().HPBar.fillAmount==0.0f)
+        {
+            //죽음
+            //결과창 띄우자
+        }
+
     }
     private void Move()
     {

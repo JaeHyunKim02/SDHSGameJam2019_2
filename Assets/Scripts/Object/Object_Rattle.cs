@@ -20,8 +20,10 @@ public class Object_Rattle : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GameManager.GetInstance().Condition += 20; //변수 이름은 일단 Hp라고 설정했는데 바꿔주세요
-            if (GameManager.GetInstance().Condition >= 101) GameManager.GetInstance().Condition = 100;
+            //GameManager.GetInstance().Condition += 20; //변수 이름은 일단 Hp라고 설정했는데 바꿔주세요
+            //if (GameManager.GetInstance().Condition >= 101) GameManager.GetInstance().Condition = 100;
+
+            GameManager.GetInstance().SPBar.fillAmount += 0.1f;
             Destroy(gameObject);   //실험할때는 주석을 켜주시고 본 게임에선 주석을 없애주세요
         }
     }
