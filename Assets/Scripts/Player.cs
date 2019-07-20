@@ -74,6 +74,7 @@ public class Player : MonoBehaviour
         if (time >= 0.8f)
         {
             StunOn = false;
+            WalkFoce = 30f;
         }
         if (IsDie)
         {
@@ -116,6 +117,13 @@ public class Player : MonoBehaviour
     public void PlayerStun(bool Stun)
     {
         StunOn = Stun;
+        time = 0;
+    }
+
+    public void BlockRun()
+    {
+        key = key * -1;
+        WalkFoce = 300;
         time = 0;
     }
 }
