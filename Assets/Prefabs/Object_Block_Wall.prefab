@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 596486797624935981}
   - component: {fileID: 734045551120145716}
-  - component: {fileID: 1306676399953397572}
   - component: {fileID: 4864189252067232506}
+  - component: {fileID: 8993403689159810765}
   m_Layer: 0
   m_Name: Object_Block_Wall
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8633129228327084163}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5875, y: 3.7, z: 1}
+  m_LocalScale: {x: 0.5654687, y: 1.52625, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 84ad20c5aefcab74e94923c9022afec5, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: bdee92b3b68ef254abc56191ff6e2619, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -81,8 +81,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1306676399953397572
-BoxCollider2D:
+--- !u!114 &4864189252067232506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8633129228327084163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a470eb551e846c4e9aae3602380a721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &8993403689159810765
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -98,24 +110,34 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.09, y: 2.61}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &4864189252067232506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8633129228327084163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a470eb551e846c4e9aae3602380a721, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Points:
+    m_Paths:
+    - - {x: 1.475, y: 0.21499999}
+      - {x: 1.105, y: 0.305}
+      - {x: 1.0649999, y: 1.165}
+      - {x: 0.865, y: 1.305}
+      - {x: 0.655, y: 1.305}
+      - {x: 0.635, y: 1.265}
+      - {x: 0.555, y: 1.305}
+      - {x: 0.265, y: 1.305}
+      - {x: 0.035, y: 1.2149999}
+      - {x: -0.035, y: 1.105}
+      - {x: -0.405, y: 1.015}
+      - {x: -0.585, y: 1.055}
+      - {x: -0.695, y: 1.055}
+      - {x: -0.995, y: 0.945}
+      - {x: -1.045, y: 0.875}
+      - {x: -1.105, y: 0.225}
+      - {x: -1.475, y: 0.195}
+      - {x: -1.545, y: 0.145}
+      - {x: -1.545, y: -1.255}
+      - {x: -1.475, y: -1.305}
+      - {x: 1.475, y: -1.305}
+      - {x: 1.545, y: -1.265}
+      - {x: 1.545, y: 0.145}
