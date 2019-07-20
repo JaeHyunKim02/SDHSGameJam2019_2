@@ -71,7 +71,7 @@ public class HelpManager : MonoBehaviour
                     Turn++;
                     break;
                 case 9:
-                    SceneManager.LoadScene("MainScene");
+                    SceneManager.LoadScene("HomeScene");
                     break;
             }
         }

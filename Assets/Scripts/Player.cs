@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class Player : MonoBehaviour
     float time;
     bool StunOn = false;
 
+    public GameObject ResultWindow;
+
     bool IsWalk;
     bool IsDie;
     bool IsHit;
@@ -24,7 +27,7 @@ public class Player : MonoBehaviour
         rigidbody2D = this.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
         renderer = gameObject.GetComponentInChildren<SpriteRenderer>();
-
+        ResultWindow.SetActive(false);
        // GameManager.GetInstance().HPBar.fillAmount -= 0.5f;
         
     }
@@ -113,6 +116,7 @@ public class Player : MonoBehaviour
         {
             //죽음
             //결과창 띄우자
+            ResultWindow.SetActive(true);
         }
 
     }

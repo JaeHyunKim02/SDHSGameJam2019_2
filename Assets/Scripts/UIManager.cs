@@ -10,12 +10,11 @@ public class UIManager : MonoBehaviour
 
     private float B_Hp;
     public float timer;
-    public int Scoer;
     private void Start()
     {
         StartCoroutine("HPSP");
         timer = 1.0f;
-        Scoer = 0;
+        GameManager.GetInstance().MyScore = 0;
 
 
         
@@ -29,11 +28,11 @@ public class UIManager : MonoBehaviour
         timer -= Time.deltaTime;
         if(timer <= 0)
         {
-            Scoer++;
+            GameManager.GetInstance().MyScore++;
             timer = 1.0f;
 
         }
-        t_MyScore.text = "MyScoer:" + Scoer;
+        t_MyScore.text = "MyScoer:" + GameManager.GetInstance().MyScore;
     }
 
     IEnumerator HPSP()

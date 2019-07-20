@@ -13,5 +13,9 @@ public class GoIngame : MonoBehaviour
     {
         SceneManager.LoadScene("MainScene");
     }
+    public void GoHelpScene()
+    {
+        SceneManager.LoadScene("HelpScene");
+    }
 
 }

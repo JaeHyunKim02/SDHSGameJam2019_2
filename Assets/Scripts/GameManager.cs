@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public int MyScore=0;
+    public int HScore;
 
     public int Hp = 100;
     public int Condition = 100;
