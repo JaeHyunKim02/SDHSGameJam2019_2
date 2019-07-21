@@ -7,8 +7,10 @@ public class Pause : MonoBehaviour
 {
     public GameObject PauseUI;
 
-    private bool isPause = false;
-
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -18,24 +20,13 @@ public class Pause : MonoBehaviour
 
     private void Update()
     {
-        if (isPause)
-        {
-            PauseUI.SetActive(true);
-            Time.timeScale = 0f;
 
-        }
-        else if (!isPause)
-        {
-            PauseUI.SetActive(false);
-            Time.timeScale = 1f;
-        }
     }
-    public void PauseButton()
+
+    public void PauseGame()
     {
-        if (!isPause)
-            isPause = true;
-        else if (isPause)
-            isPause = false;
+        PauseUI.SetActive(true);
+        Time.timeScale = 0f;
     }
 
  

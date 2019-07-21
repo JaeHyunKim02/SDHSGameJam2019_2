@@ -116,12 +116,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4955055793590018694}
-        m_MethodName: 
+      - m_Target: {fileID: 8669104844398238657}
+        m_MethodName: closeOption
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8cad13afed3a3c4aa277af4f3549a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OptionWindow: {fileID: 0}
+  OptionWindow: {fileID: 8475492347264863614}
 --- !u!1 &8475492346408335322
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +357,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a51695e89d47f4449d5230c93f3d75f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FXON: {fileID: 21300000, guid: f650c7f02b685494492fc560ccfda920, type: 3}
+  FXOFF: {fileID: 21300000, guid: 99a3db839606c85419c1c8fc2a893471, type: 3}
 --- !u!1 &8475492347246455334
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,8 +500,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dda4077a7b52ab418737e820e0865d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BGMOn: {fileID: 0}
-  BGMOff: {fileID: 0}
+  BGMON: {fileID: 21300000, guid: f650c7f02b685494492fc560ccfda920, type: 3}
+  BGMOFF: {fileID: 21300000, guid: 99a3db839606c85419c1c8fc2a893471, type: 3}
 --- !u!1 &8475492347264863614
 GameObject:
   m_ObjectHideFlags: 0

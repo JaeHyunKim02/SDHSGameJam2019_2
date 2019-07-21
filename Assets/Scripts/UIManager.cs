@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
         timer -= Time.deltaTime;
         if(timer <= 0)
         {
-            GameManager.GetInstance().MyScore++;
+            GameManager.instnce.MyScore++;
             timer = 1.0f;
 
         }
@@ -39,8 +39,8 @@ public class UIManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f);
 
-        GameManager.GetInstance().HPBar.fillAmount -= 0.025f;
-        GameManager.GetInstance().SPBar.fillAmount -= 0.025f;
+        GameManager.instnce.HPBar.fillAmount -= 0.025f;
+        GameManager.instnce.SPBar.fillAmount -= 0.025f;
         StartCoroutine("HPSP");
 
     }

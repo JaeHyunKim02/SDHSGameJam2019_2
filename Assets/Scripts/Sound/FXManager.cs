@@ -6,6 +6,8 @@ public class FXManager : MonoBehaviour
 {
     public AudioClip Touch;
     public AudioClip WindowOff;
+    public AudioClip wowItisItem;
+
 
     public AudioSource audio_F;
 
@@ -25,7 +27,7 @@ public class FXManager : MonoBehaviour
         audio_F.volume = PlayerPrefs.GetFloat("FXProgress", default);
     }
 
-    public void SoundManager_F(string audioName)
+    public void SoundManager_F(string audioName)//        GameObject.Find("FXManager").GetComponent<FXManager>().SoundManager_F("Touch"); 나오고 싶은 곳에 이렇게 사용
     {
 
         if (audioName == "Touch")
@@ -36,6 +38,11 @@ public class FXManager : MonoBehaviour
         if (audioName == "WindowOff")
         {
             audio_F.PlayOneShot(WindowOff);
+        }
+        if(audioName == "wow")
+        {
+            audio_F.PlayOneShot(wowItisItem);
+            
         }
     }
 }

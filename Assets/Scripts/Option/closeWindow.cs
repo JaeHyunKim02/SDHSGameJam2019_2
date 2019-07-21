@@ -9,7 +9,9 @@ public class closeWindow : MonoBehaviour
 
     public void closeOption()
     {
+        Debug.Log("아");
         OptionWindow.SetActive(false);
+        Time.timeScale = 1f;
 
     }
 }

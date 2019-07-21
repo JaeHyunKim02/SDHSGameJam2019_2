@@ -14,13 +14,15 @@ public class Object_Block : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (GameManager.GetInstance().isDie)
+            Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            GameObject.Find("FXManager").GetComponent<FXManager>().SoundManager_F("wow");
             if (collision.gameObject.transform.position.x >= 0)
             {
                 Instantiate(Wall, new Vector3(2.3f, -1, 0), Quaternion.identity);

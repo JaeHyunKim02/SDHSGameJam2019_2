@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     float MaxSpeed= 2.0f;
     float time;
     bool StunOn = false;
+    bool isBibrate = false;
 
     public GameObject ResultWindow;
 
@@ -22,14 +23,16 @@ public class Player : MonoBehaviour
     bool IsDie;
     bool IsHit;
 
+    bool one = true;
+    public GameObject Mark;
     private void Start()
     {
         rigidbody2D = this.GetComponent<Rigidbody2D>();
         animator = gameObject.GetComponent<Animator>();
         renderer = gameObject.GetComponentInChildren<SpriteRenderer>();
-        ResultWindow.SetActive(false);
-       // GameManager.GetInstance().HPBar.fillAmount -= 0.5f;
-        
+
+        //GameManager.GetInstance().SPBar.fillAmount -= 0.7f;
+        Init();
     }
     void FixedUpdate()
     {
@@ -37,6 +40,15 @@ public class Player : MonoBehaviour
         //{
 
         //}
+
+        if (GameManager.GetInstance().SPBar.fillAmount <= 0.3f)
+        {
+            
+            //여기다가 스타트 쿠로틴
+            Debug.Log("스타트 코루틴");
+            if(one)
+            StartCoroutine(MarkEF());
+        }
 
         if (!StunOn)
         {
@@ -112,17 +124,28 @@ public class Player : MonoBehaviour
             this.rigidbody2D.AddForce(transform.right * key * this.WalkFoce*HPSpeed);
         }
 
-        if (gameObject.transform.position.x >= 3.0f || gameObject.transform.position.x <= -3.0f||GameManager.GetInstance().HPBar.fillAmount==0.0f)
+        if (gameObject.transform.position.x >= 3f || gameObject.transform.position.x <= -3f||GameManager.GetInstance().HPBar.fillAmount==0.0f)
         {
             //죽음
             //결과창 띄우자
+
+#if UNITY_ANDROID
+            isBibrate = true;
+            if (isBibrate)
+            Handheld.Vibrate();
+            isBibrate = false;
+#endif
             ResultWindow.SetActive(true);
+            GameManager.GetInstance().isDie = true;
+            GameManager.GetInstance().NewScore(GameManager.GetInstance().MyScore);
         }
 
     }
-    private void Move()
+    private void Init()
     {
-
+        GameManager.GetInstance().isDie = false;
+        ResultWindow.SetActive(false);
+        isBibrate = false;
     }
 
     public void PlayerStun(bool Stun)
@@ -136,5 +159,23 @@ public class Player : MonoBehaviour
         key = key * -1;
         WalkFoce = 300;
         time = 0;
+    }
+
+    IEnumerator MarkEF()
+    {
+        //yield return new WaitForSeconds(0.2f);
+
+        int count = 0;
+        while (count < 8)
+        {
+            Mark.SetActive(true);
+            yield return new WaitForSeconds(0.3f);
+            Mark.SetActive(false);
+            yield return new WaitForSeconds(0.3f);
+            count++;
+        }
+        one = false;
+        //StartCoroutine("MakrEF");
+
     }
 }

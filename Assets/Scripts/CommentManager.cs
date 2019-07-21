@@ -31,7 +31,7 @@ public class CommentManager : MonoBehaviour
                 MyCommnet.text = "빨리 놀러 가고 싶어요!!";
                 break;
             case 4:
-                MyCommnet.text = "내 최고 점수는" + GameManager.GetInstance().MyScore + "점이야!!";
+                MyCommnet.text = "내 최고 점수는" + GameManager.GetInstance().HighestScore_1 + "점이야!!";
 
                 break;
             case 5:
