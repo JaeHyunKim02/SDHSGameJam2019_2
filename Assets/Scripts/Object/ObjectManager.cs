@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectManager : MonoBehaviour
 {
-    private float cooldown = 2;
+    private float cooldown = 1.5f;
     private int level = 1;
     public GameObject GO1; // 분유
     public GameObject GO2; // 기저귀
@@ -37,46 +37,46 @@ public class ObjectManager : MonoBehaviour
         switch (level)
         {
             case 1:
-                if (rand >= 1 && rand <= 40) Instantiate(GO1, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 41 && rand <= 60) Instantiate(GO2, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 61 && rand <= 70) Instantiate(GO4, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 71 && rand <= 85) Instantiate(GO5, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 86 && rand <= 95) Instantiate(GO6, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 96 && rand <= 100) Instantiate(GO7, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
+                if (rand >= 1 && rand <= 40) Instantiate(GO1, new Vector3(Random.Range(-2.5f, 2.5f),       5, 0), Quaternion.identity);
+                else if (rand >= 41 && rand <= 60) Instantiate(GO2, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 61 && rand <= 70) Instantiate(GO4, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 71 && rand <= 85) Instantiate(GO5, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 86 && rand <= 95) Instantiate(GO6, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 96 && rand <= 100) Instantiate(GO7, new Vector3(Random.Range(-2.5f, 2.5f),5, 0), Quaternion.identity);
                 break;
             case 2:
-                if (rand >= 1 && rand <= 30) Instantiate(GO1, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 31 && rand <= 50) Instantiate(GO2, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 51 && rand <= 85) Instantiate(GO5, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 86 && rand <= 95) Instantiate(GO6, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 96 && rand <= 100) Instantiate(GO7, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
+                if (rand >= 1 && rand <= 30) Instantiate(GO1, new Vector3(Random.Range(-2.5f, 2.5f),       5, 0), Quaternion.identity);
+                else if (rand >= 31 && rand <= 50) Instantiate(GO2, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 51 && rand <= 85) Instantiate(GO5, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 86 && rand <= 95) Instantiate(GO6, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 96 && rand <= 100) Instantiate(GO7, new Vector3(Random.Range(-2.5f, 2.5f),5, 0), Quaternion.identity);
                 break;
             case 3:
-                if (rand >= 1 && rand <= 25) Instantiate(GO1, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 26 && rand <= 40) Instantiate(GO2, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 41 && rand <= 50) Instantiate(GO3, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 51 && rand <= 60) Instantiate(GO4, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 61 && rand <= 87) Instantiate(GO5, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 88 && rand <= 97) Instantiate(GO6, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 98 && rand <= 100) Instantiate(GO7, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
+                if (rand >= 1 && rand <= 25) Instantiate(GO1, new Vector3(Random.Range(-2.5f, 2.5f),       5, 0), Quaternion.identity);
+                else if (rand >= 26 && rand <= 40) Instantiate(GO2, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 41 && rand <= 50) Instantiate(GO3, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 51 && rand <= 60) Instantiate(GO4, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 61 && rand <= 87) Instantiate(GO5, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 88 && rand <= 97) Instantiate(GO6, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 98 && rand <= 100) Instantiate(GO7, new Vector3(Random.Range(-2.5f, 2.5f),5, 0), Quaternion.identity);
                 break;
             case 4:
                 if (rand >= 1 && rand <= 15) Instantiate(GO1, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 16 && rand <= 35) Instantiate(GO2, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 36 && rand <= 50) Instantiate(GO3, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 51 && rand <= 65) Instantiate(GO4, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 66 && rand <= 82) Instantiate(GO5, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 83 && rand <= 97) Instantiate(GO6, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
+                else if (rand >= 16 && rand <= 35) Instantiate(GO2, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 36 && rand <= 50) Instantiate(GO3, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 51 && rand <= 65) Instantiate(GO4, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 66 && rand <= 82) Instantiate(GO5, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 83 && rand <= 97) Instantiate(GO6, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
                 else if (rand >= 98 && rand <= 100) Instantiate(GO7, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
                 break;
             case 5:
-                if (rand >= 1 && rand <= 10) Instantiate(GO1, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 11 && rand <= 25) Instantiate(GO2, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 26 && rand <= 40) Instantiate(GO3, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 41 && rand <= 60) Instantiate(GO4, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 61 && rand <= 75) Instantiate(GO5, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 76 && rand <= 97) Instantiate(GO6, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
-                else if (rand >= 98 && rand <= 100) Instantiate(GO7, new Vector3(Random.Range(-2.5f, 2.5f), 2, 0), Quaternion.identity);
+                if (rand >= 1 && rand <= 10) Instantiate(GO1, new Vector3(Random.Range(-2.5f, 2.5f),       5, 0), Quaternion.identity);
+                else if (rand >= 11 && rand <= 25) Instantiate(GO2, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 26 && rand <= 40) Instantiate(GO3, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 41 && rand <= 60) Instantiate(GO4, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 61 && rand <= 75) Instantiate(GO5, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 76 && rand <= 97) Instantiate(GO6, new Vector3(Random.Range(-2.5f, 2.5f), 5, 0), Quaternion.identity);
+                else if (rand >= 98 && rand <= 100) Instantiate(GO7, new Vector3(Random.Range(-2.5f, 2.5f),5, 0), Quaternion.identity);
                 break;
 
         }
